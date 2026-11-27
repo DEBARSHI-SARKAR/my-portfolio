@@ -49,21 +49,44 @@
     </section>
 
     <section class="content-grid" id="about" aria-label="About Deb">
-      <article class="panel about-panel">
-        <p class="eyebrow">01 / ABOUT ME!</p>
-        <h2>About me</h2>
-        <p>Well, just a 15 year old kid, solving my own problem and Contributor of NVIDIA RSX & AMD Gladius and Researching on HASC (Heterogeneous AI Super Cluster), PCHL (Parallel computing hybrid language), Dynamic Floating Math. </p>
-        <div class="tag-list">
-          <span>Kernel ecosystem</span><span>AI infrastructure</span><span>Silicon architect</span><span>Graphics infrastructure</span>
-        </div>
-      </article>
+      <div class="about-column">
+        <article class="panel about-panel">
+          <p class="eyebrow">01 / ABOUT ME!</p>
+          <h2>About me</h2>
+          <p>My name is Debarshi(deb).S, short Deb 15yo kid, working on AI infrastructure, custom computing, NPU/TPU designing and active contributor of PS4linux. And founder & project manager of PluginMC.</p>
+          <div class="tag-list">
+            <span>Kernel ecosystem</span><span>AI infrastructure</span><span>Silicon architect</span><span>Graphics infrastructure</span>
+          </div>
+        </article>
 
-      <article class="panel image-panel">
-        <p class="eyebrow">02 / A GLIMPSE</p>
-        <div class="about-image">
-          <img src="about.jpg" alt="PS2 Linux MX4SIO driver setup">
+        <article class="panel research-panel" aria-labelledby="research-heading">
+          <p class="eyebrow">03 / CURRENT RESEARCH</p>
+          <h2 id="research-heading">Featured Projects</h2>
+          <div class="research-carousel" id="researchCarousel" aria-live="polite" aria-busy="true">
+            <p class="feed-state">Loading selected research articles...</p>
+          </div>
+        </article>
+      </div>
+
+      <article class="panel work-panel" aria-labelledby="work-heading">
+        <p class="eyebrow">02 / WHAT I'VE DONE</p>
+        <h2 id="work-heading">Here is what I've done.</h2>
+        <p class="work-intro">latest updates of my work, wut I've done all along the way</p>
+
+
+        <div class="feed-heading">
+          <span class="feed-mark" aria-hidden="true"></span>
+          <span>Latest writings</span>
+          <span class="feed-source">DEV COMMUNITY</span>
         </div>
-        <p class="image-caption"><i></i> My PS2linux MX4SIO driver setup ready to do Deep Dream!</p>
+
+        <div class="article-feed" id="devArticles" aria-live="polite" aria-busy="true">
+          <p class="feed-state">Loading latest articles...</p>
+        </div>
+
+        <a class="all-articles" href="https://dev.to/debarshis" target="_blank" rel="noopener noreferrer">
+          View all articles <span aria-hidden="true">↗</span>
+        </a>
       </article>
     </section>
   </main>
