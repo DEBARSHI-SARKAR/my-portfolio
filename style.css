@@ -145,3 +145,270 @@ h1 { font-size:clamp(2.5rem, 6vw, 5rem); line-height:1.02; letter-spacing:-.065e
   .research-description { font-size:.72rem; }
 }
 @media (prefers-reduced-motion:reduce) { .research-arrow { transition:none; } }
+
+
+/* Experience — PluginMC */
+.experience-section { margin-top: 16px; }
+.experience-panel { width: calc((100% - 16px) / 2); }
+.experience-panel h2 { margin-bottom: 20px; }
+.experience-entry { display:grid; grid-template-columns:48px minmax(0,1fr); gap:12px; min-width:0; }
+.experience-company-mark {
+  display:grid; place-items:center; width:48px; height:48px;
+  border:1px solid rgba(184,161,255,.28); border-radius:9px;
+  color:#191624; background:linear-gradient(145deg,#d5c7ff,#9b83ef 58%,#6f5cc2);
+  box-shadow:0 5px 18px rgba(0,0,0,.2); font:800 .9rem 'DM Mono',monospace; letter-spacing:-.08em;
+}
+.experience-main { min-width:0; }
+.experience-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.experience-heading h3 { margin:0; color:var(--text); font-size:.98rem; line-height:1.45; }
+.experience-company { margin:2px 0 0 !important; color:var(--text) !important; font-size:.84rem; line-height:1.5 !important; }
+.experience-status { flex:0 0 auto; padding:3px 7px; border-radius:5px; color:#c5f5fa; background:rgba(91,211,226,.16); font-size:.68rem; line-height:1.3; }
+.experience-dates { margin:3px 0 10px !important; color:var(--muted); font-size:.76rem; line-height:1.5 !important; }
+.experience-description { margin:0 0 12px !important; color:var(--muted); font-size:.78rem; line-height:1.65 !important; }
+.experience-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin:10px 0 11px; }
+.experience-gallery a { display:block; min-width:0; overflow:hidden; height:64px; border:1px solid var(--line); border-radius:9px; background:rgba(10,12,20,.25); }
+.experience-gallery img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .2s ease; }
+.experience-gallery a:hover img { transform:scale(1.06); }
+.experience-skills { display:flex; flex-wrap:wrap; gap:6px; }
+.experience-skills span { padding:4px 8px; border:1px solid var(--line); border-radius:999px; color:#ded6ff; background:rgba(184,161,255,.07); font-size:.65rem; line-height:1.35; }
+@media (max-width:720px) { .experience-panel { width:100%; } }
+@media (max-width:420px) {
+  .experience-entry { grid-template-columns:40px minmax(0,1fr); gap:10px; }
+  .experience-company-mark { width:40px; height:40px; font-size:.78rem; }
+  .experience-gallery a { height:54px; }
+  .experience-heading h3 { font-size:.9rem; }
+}
+@media (prefers-reduced-motion:reduce) { .experience-gallery img { transition:none; } }
+
+
+/* Experience panel — full-width landscape layout */
+.experience-section {
+  width: 100%;
+}
+.experience-panel {
+  width: 100%;
+}
+.experience-entry {
+  grid-template-columns: 48px minmax(0, 1fr);
+  align-items: start;
+}
+.experience-main {
+  display: grid;
+  grid-template-columns: minmax(220px, .78fr) minmax(0, 1.5fr);
+  column-gap: 28px;
+  row-gap: 8px;
+  align-items: start;
+}
+.experience-heading {
+  grid-column: 1;
+  grid-row: 1;
+}
+.experience-dates {
+  grid-column: 1;
+  grid-row: 2;
+  margin-bottom: 0 !important;
+}
+.experience-description {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin: 0 !important;
+}
+.experience-gallery {
+  grid-column: 2;
+  grid-row: 3;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 4px 0 2px;
+}
+.experience-gallery a {
+  height: 86px;
+}
+.experience-skills {
+  grid-column: 1 / -1;
+  grid-row: 4;
+  margin-top: 2px;
+}
+@media (max-width: 720px) {
+  .experience-panel {
+    width: 100%;
+  }
+  .experience-main {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 8px;
+  }
+  .experience-heading,
+  .experience-dates,
+  .experience-description,
+  .experience-gallery,
+  .experience-skills {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .experience-gallery a {
+    height: 64px;
+  }
+}
+@media (max-width: 420px) {
+  .experience-entry {
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+}
+
+
+/* Experience panel — refined alignment, logo and company link */
+.experience-panel {
+  padding: 26px 28px 24px;
+}
+.experience-section-heading {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:18px;
+}
+.experience-section-heading .eyebrow { margin:0 0 8px; }
+.experience-section-heading h2 { margin:0; }
+.experience-website {
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:8px 11px;
+  border:1px solid rgba(184,161,255,.25);
+  border-radius:9px;
+  color:var(--accent);
+  background:rgba(184,161,255,.07);
+  text-decoration:none;
+  font-size:.76rem;
+  font-weight:800;
+  white-space:nowrap;
+  transition:background .2s ease,border-color .2s ease;
+}
+.experience-website:hover {
+  background:rgba(184,161,255,.14);
+  border-color:rgba(184,161,255,.5);
+}
+.experience-entry {
+  grid-template-columns:48px minmax(0,1fr);
+  gap:14px;
+}
+.experience-company-mark {
+  position:relative;
+  display:grid;
+  place-items:center;
+  width:48px;
+  height:48px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:11px;
+  color:var(--text);
+  background:rgba(255,255,255,.06);
+  box-shadow:0 5px 16px rgba(0,0,0,.16);
+  font:800 .78rem 'DM Mono',monospace;
+}
+.experience-company-mark img {
+  display:block;
+  width:100%;
+  height:100%;
+  padding:5px;
+  object-fit:contain;
+}
+.experience-company-mark span { display:none; }
+.experience-company-mark.logo-fallback {
+  color:#191624;
+  border-color:rgba(184,161,255,.28);
+  background:linear-gradient(145deg,#d5c7ff,#9b83ef 58%,#6f5cc2);
+}
+.experience-company-mark.logo-fallback span { display:block; }
+.experience-main {
+  display:grid;
+  grid-template-columns:minmax(235px,.82fr) minmax(0,1.5fr);
+  column-gap:30px;
+  row-gap:12px;
+  align-items:start;
+}
+.experience-role { grid-column:1; grid-row:1; min-width:0; }
+.experience-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
+.experience-heading h3 { font-size:1rem; }
+.experience-company { font-size:.82rem; }
+.experience-status { margin-top:1px; }
+.experience-dates { margin:7px 0 0 !important; }
+.experience-work { grid-column:2; grid-row:1; min-width:0; }
+.experience-description {
+  margin:0 !important;
+  font-size:.79rem;
+  line-height:1.7 !important;
+}
+.experience-gallery {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:9px;
+  margin:13px 0 0;
+}
+.experience-gallery a {
+  height:82px;
+  border-radius:10px;
+}
+.experience-gallery img { object-position:center; }
+.experience-skills {
+  grid-column:1 / -1;
+  grid-row:2;
+  padding-top:12px;
+  border-top:1px solid var(--line);
+  gap:7px;
+}
+.experience-skills span {
+  padding:5px 9px;
+  font-size:.66rem;
+}
+@media (max-width:720px) {
+  .experience-main {
+    grid-template-columns:minmax(0,1fr);
+    row-gap:12px;
+  }
+  .experience-role,.experience-work,.experience-skills {
+    grid-column:1;
+    grid-row:auto;
+  }
+  .experience-skills { padding-top:10px; }
+}
+@media (max-width:420px) {
+  .experience-panel { padding:22px; }
+  .experience-section-heading { align-items:flex-start; }
+  .experience-website { padding:7px 8px; font-size:.69rem; }
+  .experience-entry { grid-template-columns:40px minmax(0,1fr); gap:10px; }
+  .experience-company-mark { width:40px; height:40px; }
+  .experience-gallery a { height:58px; }
+  .experience-heading h3 { font-size:.9rem; }
+}
+
+/* Experience external project links */
+.experience-links {
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.experience-modrinth-link {
+  color:#b9e4c8;
+  border-color:rgba(85,190,125,.25);
+  background:rgba(85,190,125,.07);
+}
+.experience-modrinth-link:hover {
+  border-color:rgba(85,190,125,.5);
+  background:rgba(85,190,125,.13);
+}
+@media (max-width:520px) {
+  .experience-links { justify-content:flex-start; }
+}
+
+/* Final section — intentionally left empty for future content */
+.closing-section {
+  width: 100%;
+  margin-top: 16px;
+}
+.closing-panel {
+  width: 100%;
+  min-height: 170px;
+}
+.closing-panel h2 {
+  margin-bottom: 0;
+}
